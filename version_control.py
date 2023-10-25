@@ -7,6 +7,11 @@ def encode(orig_num):
         encoded_num += digit
     return encoded_num
 
+def decode(encoded_num):
+    result = ''
+    for i in encoded_num:
+        result += str((int(i)-3))
+    return result
 
 # Now we will define the main function. (Code up to line 19 programmed by Scott Schlingmann)
 def main():
@@ -17,6 +22,7 @@ def main():
         orig_num = input('Please enter your password to encode: ')
         encoded_num = encode(orig_num)
         print('Your password has been encoded and stored!\n')
+
 
 
 if __name__ == '__main__':
